@@ -15,7 +15,7 @@ export default function Home() {
     const [showSuccessModal, setShowSuccessModal] = useState(false);
 
     // State for content modals
-    const [activeModal, setActiveModal] = useState(null); 
+    const [activeModal, setActiveModal] = useState(null);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -29,7 +29,7 @@ export default function Home() {
 
     const openModal = (type) => {
         setActiveModal(type);
-        setIsMobileMenuOpen(false); 
+        setIsMobileMenuOpen(false);
     };
 
     return (
@@ -39,7 +39,7 @@ export default function Home() {
                 isOpen={showSuccessModal}
                 onClose={() => {
                     setShowSuccessModal(false);
-                    setEmail(''); 
+                    setEmail('');
                 }}
                 email={email}
             />
@@ -146,12 +146,12 @@ export default function Home() {
                     className="max-w-4xl mx-auto space-y-4 md:space-y-6 relative z-10"
                 >
                     <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif text-aura-dark leading-[1.15] md:leading-[1.1] tracking-tight">
-                        Turn your notes <br />
-                        into <span className="italic text-aura-green font-light pr-2">insight.</span>
+                        Turn Your Notes <br />
+                        Into <span className="italic text-aura-green font-light pr-2">Study Power</span>
                     </h1>
 
                     <p className="max-w-2xl mx-auto text-aura-gray text-base sm:text-lg md:text-xl leading-relaxed font-light px-4">
-                        Join the early access list for our AI-powered workspace that helps you write smarter, understand faster, and practice better.
+                        Join the early access list for Aura — AI-powered summaries, flashcards, and smarter studying for students.
                     </p>
                 </motion.div>
 
@@ -178,29 +178,12 @@ export default function Home() {
                                 type="submit"
                                 className="bg-aura-green hover:bg-[#2DD4BF] text-white font-semibold text-xs sm:text-sm px-5 sm:px-8 py-3 md:py-4 rounded-full transition-all shadow-glow hover:shadow-lg transform hover:-translate-y-0.5 whitespace-nowrap tracking-wide shrink-0 ml-2"
                             >
-                                <span className="hidden sm:inline">JOIN WAITLIST</span>
-                                <span className="sm:hidden">JOIN</span>
+                                <span className="hidden sm:inline">Join the Waitlist</span>
+                                <span className="sm:hidden">Join</span>
                             </button>
                         </div>
                     </form>
-
-                    <div className="mt-6 text-[10px] md:text-xs font-semibold tracking-widest text-aura-gray/60 uppercase">
-                        Designed for Mindful Writing & Deep Document Research
-                    </div>
                 </motion.div>
-
-                {/* Features Grid */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
-                    className="mt-16 md:mt-20 grid grid-cols-3 gap-4 md:gap-20 w-full max-w-2xl px-4"
-                >
-                    <FeatureItem icon={Shield} label="SECURE" />
-                    <FeatureItem icon={Sprout} label="MINDFUL" />
-                    <FeatureItem icon={Diamond} label="EXCLUSIVE" />
-                </motion.div>
-
             </main>
 
             {/* Footer */}
@@ -216,12 +199,3 @@ export default function Home() {
         </div>
     );
 }
-
-const FeatureItem = ({ icon: Icon, label }) => (
-    <div className="flex flex-col items-center gap-2 md:gap-3 group cursor-default">
-        <Icon className="w-5 h-5 md:w-6 md:h-6 text-aura-gray/60 group-hover:text-aura-green transition-colors" />
-        <span className="text-[9px] md:text-xs font-bold tracking-[0.15em] text-aura-gray/60 uppercase group-hover:text-aura-gray transition-colors">
-            {label}
-        </span>
-    </div>
-);
