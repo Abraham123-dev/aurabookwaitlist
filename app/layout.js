@@ -22,8 +22,24 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  title: "Aura",
-  description: "AI-powered workspace",
+  title: "Aura Note — Turn Your Notes Into Study Power",
+  description:
+    "AI-powered summaries, flashcards, and smarter studying for students. Join the early access waitlist.",
+  openGraph: {
+    title: "Aura Note — Turn Your Notes Into Study Power",
+    description:
+      "AI-powered summaries, flashcards, and smarter studying for students. Join the early access waitlist.",
+    url: "https://aura-note.com",
+    siteName: "Aura Note",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Aura Note — Turn Your Notes Into Study Power",
+    description:
+      "AI-powered summaries, flashcards, and smarter studying for students. Join the early access waitlist.",
+    creator: "@auranote",
+  },
 };
 
 export default function RootLayout({ children }) {
