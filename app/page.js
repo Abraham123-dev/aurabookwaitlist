@@ -117,6 +117,7 @@ export default function Home() {
                             <p className="text-[10px] font-medium text-aura-dark leading-snug">What is photosynthesis?</p>
                             <div className="mt-2 pt-2 border-t border-aura-gray/10">
                                 <p className="text-[9px] text-aura-gray">Tap to reveal →</p>
+                                <Link onClick={() => openModal}/>
                             </div>
                         </div>
                     </FloatingElement>
@@ -156,7 +157,7 @@ export default function Home() {
                     transition={{ duration: 0.8 }}
                     className="max-w-4xl w-full mx-auto relative z-10"
                 >
-                    <h1 className="text-[2.6rem] leading-[1.15] sm:text-6xl md:text-7xl lg:text-8xl font-serif text-aura-dark md:leading-[1.1] tracking-tight">
+                    <h1 className="text-[2.6rem] leading-[1.15] sm:text-6xl md:text-7xl mt-2 lg:text-8xl font-serif text-aura-dark md:leading-[1.1] tracking-tight">
                         Turn Your Notes <br className="hidden sm:block" />
                         Into{' '}
                         <span className="italic text-aura-green font-light">Study Power</span>
@@ -175,12 +176,12 @@ export default function Home() {
                     className="mt-7 sm:mt-9 w-full max-w-lg sm:max-w-xl md:max-w-2xl mx-auto relative z-10 px-1"
                 >
                     <form onSubmit={handleSubmit} className="relative group">
-                        <div className="absolute -inset-1 bg-gradient-to-r from-aura-green/20 to-blue-50/20 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000" />
+                        <div className="absolute -inset-1 bg-linear-to-r from-aura-green/20 to-blue-50/20 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000" />
                         <div className="relative flex items-center bg-white shadow-soft rounded-full p-2 pl-5 sm:pl-6 transition-all border border-transparent focus-within:border-aura-green/30 focus-within:shadow-lg">
                             <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-aura-gray/50 mr-2 sm:mr-3 shrink-0" />
                             <input
                                 type="email"
-                                placeholder="Enter your email..."
+                                placeholder="Enter your email to Join the waitlist..."
                                 className="flex-1 bg-transparent outline-none text-aura-dark placeholder:text-aura-gray/40 text-sm sm:text-base md:text-lg py-2.5 min-w-0 disabled:opacity-60"
                                 value={email}
                                 onChange={(e) => { setEmail(e.target.value); if (error) setError(''); }}
